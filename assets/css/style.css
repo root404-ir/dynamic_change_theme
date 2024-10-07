@@ -1,15 +1,19 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 :root {
-    --color-theme: #ff1756;
+    --main-color: #ff1756;
 }
 
 body {
-    background-color: #fff;
+    background-image: url('../images/3402668.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
 }
 
 .container {
@@ -22,99 +26,102 @@ body {
 .card {
     width: 320px;
     height: 420px;
-    background: linear-gradient(to bottom, var(--color-theme) 110px, #ffffff 110px);
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(50, 50, 50, 0.1);
+    background: linear-gradient(to bottom, var(--main-color)114px, #fff 114px);
     padding: 50px 0;
+    border-radius: 16px;
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.3);
 }
 
-.card * {
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    letter-spacing: 0.5px;
-    font-weight: 600;
-}
-
-img {
-    display: block;
+.card img {
     width: 100px;
     height: 100px;
-    position: relative;
     border-radius: 50%;
-    margin: 0 auto;
-    box-shadow: 0 0 0 8px #ffff;
-    border: 3px dotted var(--color-theme);
+    box-shadow: 0 0 0 8px #fff;
+    border: 3px dashed var(--main-color);
 }
 
 .card h4 {
-    color: var(--color-theme);
-    font-size: 16px;
-    margin: 15px 0 5px 0;
+    color: var(--main-color);
+    margin-top: 0.5rem;
+    font-size: 17px;
+    letter-spacing: 2px;
+    font-weight: 700;
 }
 
 .card h5 {
-    color: #454545;
-    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
+    margin-top: 0.3rem;
     font-size: 14px;
 }
 
 .details {
     width: 100%;
-    margin-top: 30px;
+    display: flex;
+    margin-top: 1.5rem;
+    justify-content: space-around;
+}
+
+.datails_col {
+    display: flex;
+    flex-direction: column;
+}
+
+.datails_col span:first-child {
+    font-weight: bold;
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.datails_col span:last-child {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.detail_btn_container {
+    margin-top: 2rem;
     display: flex;
     justify-content: space-around;
 }
 
-.details h2 {
-    font-weight: 400;
-}
-
-.details span {
-    color: var(--color-theme);
-}
-
-.buttons {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
-}
-
-.buttons button {
-    width: 130px;
-    padding: 8px 0;
-    border-radius: 25px;
-    border: 3px solid var(--color-theme);
+.datails_btn {
     cursor: pointer;
+    border: 0;
+    outline: none;
+    padding: 0.5rem 2rem;
+    border-radius: 13px;
+    border: 3px solid var(--main-color);
 }
 
-.buttons button:first-child {
-    background-color: var(--color-theme);
+.detail_btn_container button:first-child {
+    background-color: var(--main-color);
     color: #fff;
 }
 
-.buttons button:last-child {
+.detail_btn_container button:last-child {
+    color: var(--main-color);
     background-color: #fff;
-    color: var(--color-theme);
 }
 
 .theme {
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.3);
     background-color: #fff;
-    box-shadow: 0 5px 15px rgba(50, 50, 50, 0.1);
-    padding: 20px;
-    margin-top: 40px;
+    margin-top: 1rem;
+    border-radius: 16px;
+    padding: 1rem 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
 
-.theme button {
-    width: 25px;
-    height: 25px;
-    border: 3px soli #dddddd;
-    outline: none;
-    border: none;
-    border-radius: 50%;
+.btn {
     cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 0;
+    outline: none;
 }
 
 .btn1 {

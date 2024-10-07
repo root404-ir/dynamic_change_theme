@@ -1,11 +1,10 @@
 const $ = document
-const themeCssVar = $.querySelector(':root')
+const cssRootVar = $.querySelector(':root')
 const themeBtn = $.querySelectorAll('.btn')
 
-themeBtn.forEach(btn => {
-    btn.addEventListener('click', (event) => {
-        let mainThemeColor = event.target.dataset.color
-        themeCssVar.style.setProperty('--color-theme', mainThemeColor)
+themeBtn.forEach(btns => {
+    btns.addEventListener('click', (event) => {
+        let mainTheme = event.target.dataset.color
+        cssRootVar.style.setProperty('--main-color', mainTheme)
     })
 })
-
